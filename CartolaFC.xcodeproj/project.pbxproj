@@ -12,6 +12,9 @@
 		8270E6761FE3306600813DAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8270E6741FE3306600813DAA /* Main.storyboard */; };
 		8270E6781FE3306600813DAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8270E6771FE3306600813DAA /* Assets.xcassets */; };
 		8270E67B1FE3306600813DAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8270E6791FE3306600813DAA /* LaunchScreen.storyboard */; };
+		8270E6861FE3351600813DAA /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8270E6851FE3351600813DAA /* MenuController.swift */; };
+		8270E6881FE3363B00813DAA /* TopController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8270E6871FE3363B00813DAA /* TopController.swift */; };
+		8270E68A1FE3365F00813DAA /* MatchesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8270E6891FE3365F00813DAA /* MatchesController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,9 @@
 		8270E6771FE3306600813DAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8270E67A1FE3306600813DAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8270E67C1FE3306600813DAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8270E6851FE3351600813DAA /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		8270E6871FE3363B00813DAA /* TopController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopController.swift; sourceTree = "<group>"; };
+		8270E6891FE3365F00813DAA /* MatchesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesController.swift; sourceTree = "<group>"; };
 		F07E2EF6D46416F4123963A5 /* Pods-CartolaFC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CartolaFC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CartolaFC/Pods-CartolaFC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,6 +103,9 @@
 		8270E6841FE330A200813DAA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8270E6851FE3351600813DAA /* MenuController.swift */,
+				8270E6871FE3363B00813DAA /* TopController.swift */,
+				8270E6891FE3365F00813DAA /* MatchesController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -232,7 +241,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8270E6881FE3363B00813DAA /* TopController.swift in Sources */,
+				8270E6861FE3351600813DAA /* MenuController.swift in Sources */,
 				8270E6711FE3306600813DAA /* AppDelegate.swift in Sources */,
+				8270E68A1FE3365F00813DAA /* MatchesController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
