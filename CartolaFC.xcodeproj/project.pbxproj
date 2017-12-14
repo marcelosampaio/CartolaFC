@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65C67ED3B986CB1005243D9D /* Pods_CartolaFC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 591AECAFABE5D70B591CFF67 /* Pods_CartolaFC.framework */; };
 		8270E6711FE3306600813DAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8270E6701FE3306600813DAA /* AppDelegate.swift */; };
 		8270E6761FE3306600813DAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8270E6741FE3306600813DAA /* Main.storyboard */; };
 		8270E6781FE3306600813DAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8270E6771FE3306600813DAA /* Assets.xcassets */; };
@@ -14,12 +15,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		591AECAFABE5D70B591CFF67 /* Pods_CartolaFC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CartolaFC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		72F03CEF1A25A25017E596AE /* Pods-CartolaFC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CartolaFC.release.xcconfig"; path = "Pods/Target Support Files/Pods-CartolaFC/Pods-CartolaFC.release.xcconfig"; sourceTree = "<group>"; };
 		8270E66D1FE3306600813DAA /* CartolaFC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CartolaFC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8270E6701FE3306600813DAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8270E6751FE3306600813DAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8270E6771FE3306600813DAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8270E67A1FE3306600813DAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8270E67C1FE3306600813DAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F07E2EF6D46416F4123963A5 /* Pods-CartolaFC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CartolaFC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CartolaFC/Pods-CartolaFC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,17 +31,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65C67ED3B986CB1005243D9D /* Pods_CartolaFC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12368CFA7905A20D7F227CCB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F07E2EF6D46416F4123963A5 /* Pods-CartolaFC.debug.xcconfig */,
+				72F03CEF1A25A25017E596AE /* Pods-CartolaFC.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8270E6641FE3306600813DAA = {
 			isa = PBXGroup;
 			children = (
 				8270E66F1FE3306600813DAA /* CartolaFC */,
 				8270E66E1FE3306600813DAA /* Products */,
+				12368CFA7905A20D7F227CCB /* Pods */,
+				C271C98322AEBB9CB1F8D70E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,6 +101,14 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		C271C98322AEBB9CB1F8D70E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				591AECAFABE5D70B591CFF67 /* Pods_CartolaFC.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -92,9 +116,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8270E67F1FE3306600813DAA /* Build configuration list for PBXNativeTarget "CartolaFC" */;
 			buildPhases = (
+				FE2E74838A9FE5DC7E58B006 /* [CP] Check Pods Manifest.lock */,
 				8270E6691FE3306600813DAA /* Sources */,
 				8270E66A1FE3306600813DAA /* Frameworks */,
 				8270E66B1FE3306600813DAA /* Resources */,
+				B713F73A9DE8742071BF7266 /* [CP] Embed Pods Frameworks */,
+				7C0A7E0711BD80F80F2B6971 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -151,6 +178,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7C0A7E0711BD80F80F2B6971 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CartolaFC/Pods-CartolaFC-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B713F73A9DE8742071BF7266 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CartolaFC/Pods-CartolaFC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE2E74838A9FE5DC7E58B006 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8270E6691FE3306600813DAA /* Sources */ = {
@@ -292,6 +367,7 @@
 		};
 		8270E6801FE3306600813DAA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F07E2EF6D46416F4123963A5 /* Pods-CartolaFC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -308,6 +384,7 @@
 		};
 		8270E6811FE3306600813DAA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72F03CEF1A25A25017E596AE /* Pods-CartolaFC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
