@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class TopController: UITableViewController {
     
@@ -41,6 +42,17 @@ class TopController: UITableViewController {
         let clube = clubes[indexPath.row]
         cell.name.text = clube.nome
         cell.position.text = clube.posicao! + "º"
+        
+        if clube.escudos[0].url == nil {
+            cell.badge.image = UIImage(named: "ball")
+        }else{
+            let url = URL(string: clube.escudos[0].url!)
+            // image
+            cell.badge?.kf.setImage(with: url)
+            
+        }
+        
+        
 
         return cell
     }
