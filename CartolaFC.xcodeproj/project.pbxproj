@@ -16,6 +16,7 @@
 		8270E6881FE3363B00813DAA /* TopController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8270E6871FE3363B00813DAA /* TopController.swift */; };
 		8270E68A1FE3365F00813DAA /* MatchesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8270E6891FE3365F00813DAA /* MatchesController.swift */; };
 		8270E68D1FE3E8D200813DAA /* TopTeamsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8270E68C1FE3E8D200813DAA /* TopTeamsCell.swift */; };
+		8270E68F1FE3EB0200813DAA /* MatchesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8270E68E1FE3EB0200813DAA /* MatchesCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		8270E6871FE3363B00813DAA /* TopController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopController.swift; sourceTree = "<group>"; };
 		8270E6891FE3365F00813DAA /* MatchesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesController.swift; sourceTree = "<group>"; };
 		8270E68C1FE3E8D200813DAA /* TopTeamsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTeamsCell.swift; sourceTree = "<group>"; };
+		8270E68E1FE3EB0200813DAA /* MatchesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesCell.swift; sourceTree = "<group>"; };
 		F07E2EF6D46416F4123963A5 /* Pods-CartolaFC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CartolaFC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CartolaFC/Pods-CartolaFC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				8270E68C1FE3E8D200813DAA /* TopTeamsCell.swift */,
+				8270E68E1FE3EB0200813DAA /* MatchesCell.swift */,
 			);
 			path = "Custom Cell";
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				8270E6861FE3351600813DAA /* MenuController.swift in Sources */,
 				8270E6711FE3306600813DAA /* AppDelegate.swift in Sources */,
 				8270E68A1FE3365F00813DAA /* MatchesController.swift in Sources */,
+				8270E68F1FE3EB0200813DAA /* MatchesCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
