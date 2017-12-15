@@ -17,5 +17,10 @@ class MenuController: UITableViewController {
 
     }
 
+    
+    // MARK: - Table View Delegate
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("☘️ selected row \(indexPath.section)")
+    }
 
 }
