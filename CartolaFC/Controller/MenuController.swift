@@ -27,6 +27,7 @@ class MenuController: UITableViewController {
             // completion success
         }) { (error) in
             // error
+            self.alert(message: "Problemas ao recuperar os dados do Cartola FC.")
         }
     }
     
@@ -52,5 +53,22 @@ class MenuController: UITableViewController {
             print("🚩PARTIDAS")
         }
     }
+    
+    
+    // MARK: - Alert Helper
+    private func alert(message: String){
+        let alertController = UIAlertController(title: message, message: nil, preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "OK", style: .cancel) { (action) in
+            // OK
+        }
+        alertController.addAction(okAction)
+        self.present(alertController, animated: true) {
+            // completion
+        }
+        
+        
+    }
+    
     
 }

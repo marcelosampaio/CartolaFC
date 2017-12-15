@@ -23,6 +23,8 @@ class ServiceAPI: NSObject {
         Alamofire.request(url).responseJSON { (response) -> Void in
             if response.result.isSuccess {
                 
+                print("🍟  RESPONSE OK")
+                
                 var partidaResponse = PartidaResponse()
 //
 //                if let result = response.data {
