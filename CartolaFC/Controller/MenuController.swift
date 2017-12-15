@@ -21,6 +21,23 @@ class MenuController: UITableViewController {
     // MARK: - Table View Delegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("☘️ selected row \(indexPath.section)")
+        if indexPath.section == 0 {
+            // Top
+            performSegue(withIdentifier: "showTopTeams", sender: nil)
+        } else if indexPath.section == 1 {
+            performSegue(withIdentifier: "showMatches", sender: nil)
+        }
     }
 
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("🚩 prepare for segue  🚩")
+        if segue.identifier == "showTopTeams" {
+            print("🚩 TOP 10")
+        }else if segue.identifier == "showMatches"{
+            print("🚩PARTIDAS")
+        }
+    }
+    
 }
