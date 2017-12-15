@@ -23,6 +23,7 @@
 		8270E68A1FE3365F00813DAA /* MatchesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8270E6891FE3365F00813DAA /* MatchesController.swift */; };
 		8270E68D1FE3E8D200813DAA /* TopTeamsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8270E68C1FE3E8D200813DAA /* TopTeamsCell.swift */; };
 		8270E68F1FE3EB0200813DAA /* MatchesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8270E68E1FE3EB0200813DAA /* MatchesCell.swift */; };
+		82B8A7BD1FE491CB006BC9F1 /* UIColor+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B8A7BC1FE491CB006BC9F1 /* UIColor+Util.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		8270E6891FE3365F00813DAA /* MatchesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesController.swift; sourceTree = "<group>"; };
 		8270E68C1FE3E8D200813DAA /* TopTeamsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTeamsCell.swift; sourceTree = "<group>"; };
 		8270E68E1FE3EB0200813DAA /* MatchesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesCell.swift; sourceTree = "<group>"; };
+		82B8A7BC1FE491CB006BC9F1 /* UIColor+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Util.swift"; sourceTree = "<group>"; };
 		F07E2EF6D46416F4123963A5 /* Pods-CartolaFC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CartolaFC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CartolaFC/Pods-CartolaFC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,6 +109,7 @@
 		8270E66F1FE3306600813DAA /* CartolaFC */ = {
 			isa = PBXGroup;
 			children = (
+				82B8A7BB1FE49190006BC9F1 /* Extension */,
 				822A5AC21FE3F22A002DD5B8 /* Service */,
 				822A5ABF1FE3F198002DD5B8 /* Root */,
 				8270E68B1FE3E8A100813DAA /* Custom Cell */,
@@ -156,6 +159,14 @@
 				8270E68E1FE3EB0200813DAA /* MatchesCell.swift */,
 			);
 			path = "Custom Cell";
+			sourceTree = "<group>";
+		};
+		82B8A7BB1FE49190006BC9F1 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				82B8A7BC1FE491CB006BC9F1 /* UIColor+Util.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		C271C98322AEBB9CB1F8D70E /* Frameworks */ = {
@@ -301,6 +312,7 @@
 				8270E68F1FE3EB0200813DAA /* MatchesCell.swift in Sources */,
 				822A5ACC1FE3F960002DD5B8 /* PartidaResponse.swift in Sources */,
 				822A5AC81FE3F76C002DD5B8 /* Clube.swift in Sources */,
+				82B8A7BD1FE491CB006BC9F1 /* UIColor+Util.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

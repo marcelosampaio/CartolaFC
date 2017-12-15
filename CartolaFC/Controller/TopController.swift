@@ -17,8 +17,15 @@ class TopController: UITableViewController {
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+         appearance()
+        
     }
 
+    // MARK: - Appearance
+    private func appearance() {
+        tableView.backgroundColor = UIColor.backgroundColor
+        
+    }
 
     // MARK: - Table View DataSource and Delegate
     override func numberOfSections(in tableView: UITableView) -> Int {
