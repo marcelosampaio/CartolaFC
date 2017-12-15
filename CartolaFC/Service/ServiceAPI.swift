@@ -25,6 +25,13 @@ class ServiceAPI: NSObject {
                 
                 print("🍟  RESPONSE OK")
                 
+                if let result = response.result.value {
+                    let JSON = result as! NSDictionary
+                    print(JSON)
+                }
+                
+                
+                
                 var partidaResponse = PartidaResponse()
 //
 //                if let result = response.data {
