@@ -13,8 +13,6 @@ struct PartidaResponse {
     var clubes = [Clube]()
     var rodada: String?
     
-    
-    
     init(){
         self.partidas = [Partida]()
         self.clubes = [Clube]()

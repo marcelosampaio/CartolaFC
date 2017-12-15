@@ -12,7 +12,6 @@ struct Escudo {
     var tamanho: String?
     var url: String?
     
-    
     init(){
         self.tamanho = String()
         self.url = String()

@@ -14,9 +14,22 @@ class MenuController: UITableViewController {
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        // get cartola data
+        getCartolaData()
+        
+        
     }
 
+    // MARK: - Application Data Source
+    private func getCartolaData() {
+        ServiceAPI.getCartolaData(success: { (partidaResponse) in
+            // completion success
+        }) { (error) in
+            // error
+        }
+    }
+    
     
     // MARK: - Table View Delegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
