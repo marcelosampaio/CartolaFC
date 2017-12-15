@@ -74,12 +74,13 @@ class ServiceAPI: NSObject {
         
         // populate "clubes"
         for (key, value) in clubesDic {
-            print("👉 key: \(key)  👉 value: \(value)")
             let clubeDic = value as! NSDictionary
             let clubeObject = populateClubeObject(clubeDic)
             partidaResponse.clubes.append(clubeObject)
         }
         
+        // populate "rodada"
+        partidaResponse.rodada = String(describing: dic["rodada"]!)
         
         return PartidaResponse()
     }
@@ -110,9 +111,27 @@ class ServiceAPI: NSObject {
         clube.abreviacao = clubeDic["abreviacao"] as? String
         clube.posicao = String(describing: clubeDic["posicao"]!)
         
+        let escudosDic = clubeDic["escudos"] as! NSDictionary
+
+        // populate "escudos"
+        for (key, value) in escudosDic {
+            print("👉 escudos key: \(key)  👉 value: \(value)")
+            let escudoStr = value as! String
+            let escudoTamanho = key as! String
+            let escudoObject = populateEscudoObject(escudoStr: escudoStr, escudoTamanho: escudoTamanho)
+            clube.escudos.append(escudoObject)
+        }
+        
         return clube
     }
     
+    
+    private class func populateEscudoObject(escudoStr: String, escudoTamanho: String) -> Escudo {
+        var escudo = Escudo()
+        escudo.tamanho = escudoTamanho
+        escudo.url = escudoStr
+        return escudo
+    }
     
     
 }
