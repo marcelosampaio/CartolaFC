@@ -60,12 +60,21 @@ class ServiceAPI: NSObject {
     private class func populateModel(dic: NSDictionary) -> PartidaResponse {
 
         let partidasArray = dic["partidas"] as! NSArray
+        let clubesDic = dic["clubes"] as! NSDictionary
         
+        
+        var partidaResponse = PartidaResponse()
+        
+        // populate "partidas"
         for item in partidasArray {
             let partidaDic = item as! NSDictionary
             let partidaObject = populatePartidaObject(partidaDic)
-            
-            
+            partidaResponse.partidas.append(partidaObject)
+        }
+        
+        // populate "clubes"
+        for (key, value) in clubesDic {
+            print("👉 key: \(key)  👉 value: \(value)")
         }
         
         
@@ -73,10 +82,21 @@ class ServiceAPI: NSObject {
     }
     
     private class func populatePartidaObject(_ partidaDic: NSDictionary) -> Partida {
-        
-        print("👉... partidaDic: \(String(describing: partidaDic["clube_casa_id"]))")
-        
-        return Partida()
-        
+        var partida = Partida()
+        partida.partida_id = String(describing: partidaDic["partida_id"]!)
+        partida.clube_casa_id = String(describing: partidaDic["clube_casa_id"]!)
+        partida.clube_casa_posicao = String(describing: partidaDic["clube_casa_posicao"]!)
+        partida.clube_visitante_id = String(describing: partidaDic["clube_visitante_id"]!)
+        partida.aproveitamento_mandante = (partidaDic["aproveitamento_mandante"] as? [String])!
+        partida.aproveitamento_visitante = (partidaDic["aproveitamento_visitante"] as? [String])!
+        partida.clube_visitante_posicao = String(describing: partidaDic["clube_visitante_posicao"]!)
+        partida.partida_data = partidaDic["partida_data"] as? String
+        partida.local = partidaDic["local"] as? String
+        partida.valida = (partidaDic["valida"] as? Bool)!
+        partida.placar_oficial_mandante = String(describing: partidaDic["placar_oficial_mandante"]!)
+        partida.placar_oficial_visitante = String(describing: partidaDic["placar_oficial_visitante"]!)
+        partida.url_confronto = partidaDic["url_confronto"] as? String
+        partida.url_transmissao = partidaDic["url_transmissao"] as? String
+        return partida
     }
 }
