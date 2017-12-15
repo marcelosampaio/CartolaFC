@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		65C67ED3B986CB1005243D9D /* Pods_CartolaFC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 591AECAFABE5D70B591CFF67 /* Pods_CartolaFC.framework */; };
+		822A5AC11FE3F1C3002DD5B8 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 822A5AC01FE3F1C3002DD5B8 /* Config.plist */; };
+		822A5AC41FE3F24E002DD5B8 /* ServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822A5AC31FE3F24E002DD5B8 /* ServiceAPI.swift */; };
+		822A5AC61FE3F4FB002DD5B8 /* Partida.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822A5AC51FE3F4FB002DD5B8 /* Partida.swift */; };
+		822A5AC81FE3F76C002DD5B8 /* Clube.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822A5AC71FE3F76C002DD5B8 /* Clube.swift */; };
+		822A5ACA1FE3F807002DD5B8 /* Escudo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822A5AC91FE3F807002DD5B8 /* Escudo.swift */; };
+		822A5ACC1FE3F960002DD5B8 /* PartidaResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822A5ACB1FE3F960002DD5B8 /* PartidaResponse.swift */; };
 		8270E6711FE3306600813DAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8270E6701FE3306600813DAA /* AppDelegate.swift */; };
 		8270E6761FE3306600813DAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8270E6741FE3306600813DAA /* Main.storyboard */; };
 		8270E6781FE3306600813DAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8270E6771FE3306600813DAA /* Assets.xcassets */; };
@@ -22,6 +28,12 @@
 /* Begin PBXFileReference section */
 		591AECAFABE5D70B591CFF67 /* Pods_CartolaFC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CartolaFC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72F03CEF1A25A25017E596AE /* Pods-CartolaFC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CartolaFC.release.xcconfig"; path = "Pods/Target Support Files/Pods-CartolaFC/Pods-CartolaFC.release.xcconfig"; sourceTree = "<group>"; };
+		822A5AC01FE3F1C3002DD5B8 /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
+		822A5AC31FE3F24E002DD5B8 /* ServiceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAPI.swift; sourceTree = "<group>"; };
+		822A5AC51FE3F4FB002DD5B8 /* Partida.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Partida.swift; sourceTree = "<group>"; };
+		822A5AC71FE3F76C002DD5B8 /* Clube.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clube.swift; sourceTree = "<group>"; };
+		822A5AC91FE3F807002DD5B8 /* Escudo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Escudo.swift; sourceTree = "<group>"; };
+		822A5ACB1FE3F960002DD5B8 /* PartidaResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartidaResponse.swift; sourceTree = "<group>"; };
 		8270E66D1FE3306600813DAA /* CartolaFC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CartolaFC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8270E6701FE3306600813DAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8270E6751FE3306600813DAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -57,6 +69,23 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		822A5ABF1FE3F198002DD5B8 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				8270E6701FE3306600813DAA /* AppDelegate.swift */,
+				822A5AC01FE3F1C3002DD5B8 /* Config.plist */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		822A5AC21FE3F22A002DD5B8 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				822A5AC31FE3F24E002DD5B8 /* ServiceAPI.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		8270E6641FE3306600813DAA = {
 			isa = PBXGroup;
 			children = (
@@ -78,11 +107,12 @@
 		8270E66F1FE3306600813DAA /* CartolaFC */ = {
 			isa = PBXGroup;
 			children = (
+				822A5AC21FE3F22A002DD5B8 /* Service */,
+				822A5ABF1FE3F198002DD5B8 /* Root */,
 				8270E68B1FE3E8A100813DAA /* Custom Cell */,
 				8270E6841FE330A200813DAA /* Controller */,
 				8270E6831FE3309900813DAA /* Model */,
 				8270E6821FE3308300813DAA /* User Interface */,
-				8270E6701FE3306600813DAA /* AppDelegate.swift */,
 				8270E6771FE3306600813DAA /* Assets.xcassets */,
 				8270E67C1FE3306600813DAA /* Info.plist */,
 			);
@@ -101,6 +131,10 @@
 		8270E6831FE3309900813DAA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				822A5AC51FE3F4FB002DD5B8 /* Partida.swift */,
+				822A5AC71FE3F76C002DD5B8 /* Clube.swift */,
+				822A5AC91FE3F807002DD5B8 /* Escudo.swift */,
+				822A5ACB1FE3F960002DD5B8 /* PartidaResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -194,6 +228,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				822A5AC11FE3F1C3002DD5B8 /* Config.plist in Resources */,
 				8270E67B1FE3306600813DAA /* LaunchScreen.storyboard in Resources */,
 				8270E6781FE3306600813DAA /* Assets.xcassets in Resources */,
 				8270E6761FE3306600813DAA /* Main.storyboard in Resources */,
@@ -255,12 +290,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				822A5AC41FE3F24E002DD5B8 /* ServiceAPI.swift in Sources */,
 				8270E68D1FE3E8D200813DAA /* TopTeamsCell.swift in Sources */,
+				822A5ACA1FE3F807002DD5B8 /* Escudo.swift in Sources */,
 				8270E6881FE3363B00813DAA /* TopController.swift in Sources */,
 				8270E6861FE3351600813DAA /* MenuController.swift in Sources */,
 				8270E6711FE3306600813DAA /* AppDelegate.swift in Sources */,
+				822A5AC61FE3F4FB002DD5B8 /* Partida.swift in Sources */,
 				8270E68A1FE3365F00813DAA /* MatchesController.swift in Sources */,
 				8270E68F1FE3EB0200813DAA /* MatchesCell.swift in Sources */,
+				822A5ACC1FE3F960002DD5B8 /* PartidaResponse.swift in Sources */,
+				822A5AC81FE3F76C002DD5B8 /* Clube.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
