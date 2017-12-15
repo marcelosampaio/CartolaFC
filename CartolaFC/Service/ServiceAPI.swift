@@ -23,24 +23,15 @@ class ServiceAPI: NSObject {
         Alamofire.request(url).responseJSON { (response) -> Void in
             if response.result.isSuccess {
                 
-                print("🍟  RESPONSE OK")
-                
-                if let result = response.result.value {
-                    let JSON = result as! NSDictionary
-                    print(JSON)
-                }
-                
-                
-                
                 var partidaResponse = PartidaResponse()
-//
-//                if let result = response.data {
-//                    let jsonDic = JSON(data: result)
-//                    let jsonValueDic = jsonDic.rawValue as! NSDictionary
-//                    searchResults = SearchResults(object: jsonValueDic) as SearchResults
-//
-//                }
                 
+                print("🍟  RESPONSE OK")
+
+                if let result = response.result.value {
+                    let resultDic = result as! NSDictionary
+                    partidaResponse = populateModel(dic: resultDic)
+                }
+
                 success(partidaResponse)
             }
             
@@ -66,5 +57,15 @@ class ServiceAPI: NSObject {
         return result
     }
 
+    private class func populateModel(dic: NSDictionary) -> PartidaResponse {
+        print("〽️ populate model: \(String(describing: dic["clubes"]))")
+        
+        //                    print("👉 partidas: \(String(describing: resultDic["partidas"]))")
+        let newArray = dic["partidas"] as! NSArray
+        print("👉 arrray partidas: \(newArray.count)")
+        
+        return PartidaResponse()
+    }
+    
     
 }
