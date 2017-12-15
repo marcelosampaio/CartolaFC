@@ -38,7 +38,7 @@ class MatchesController: UITableViewController {
         
         cell.name1.text = getTeamName(partida.clube_casa_id!)
         cell.name2.text = getTeamName(partida.clube_visitante_id!)
-        cell.dateTime.text = partida.partida_data!
+        cell.dateTime.text = getFormattedDate(partida.partida_data!)
         cell.stadium.text = partida.local!
 
         return cell
@@ -53,4 +53,15 @@ class MatchesController: UITableViewController {
         }
         return ""
     }
+    
+    private func getFormattedDate(_ dateString: String) -> String {
+        let dateTimeArray = dateString.components(separatedBy: " ")
+        let dateString = dateTimeArray[0]
+        let dateArray = dateString.components(separatedBy: "-")
+        let timeString = dateTimeArray[1]
+        let timeArray = timeString.components(separatedBy: ":")
+        return dateArray[2] + "/" + dateArray[1] + "/" + dateArray[0] + " " + timeArray[0] + ":" + timeArray[1] + "h"
+    }
+    
+    
 }
