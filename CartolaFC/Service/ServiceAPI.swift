@@ -61,8 +61,13 @@ class ServiceAPI: NSObject {
         print("〽️ populate model: \(String(describing: dic["clubes"]))")
         
         //                    print("👉 partidas: \(String(describing: resultDic["partidas"]))")
-        let newArray = dic["partidas"] as! NSArray
-        print("👉 arrray partidas: \(newArray.count)")
+        let partidasArray = dic["partidas"] as! NSArray
+        print("👉 arrray partidas: \(partidasArray.count)")
+        
+        for partidaDic in partidasArray {
+            print("👉... partidaDic: \(partidaDic)")
+        }
+        
         
         return PartidaResponse()
     }
