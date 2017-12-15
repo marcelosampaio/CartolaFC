@@ -58,20 +58,25 @@ class ServiceAPI: NSObject {
     }
 
     private class func populateModel(dic: NSDictionary) -> PartidaResponse {
-//        print("〽️ populate model: \(String(describing: dic["clubes"]))")
-        
-        //                    print("👉 partidas: \(String(describing: resultDic["partidas"]))")
+
         let partidasArray = dic["partidas"] as! NSArray
-//        print("👉 arrray partidas: \(partidasArray.count)")
         
         for item in partidasArray {
             let partidaDic = item as! NSDictionary
-            print("👉... partidaDic: \(String(describing: partidaDic["clube_casa_id"]))")
+            let partidaObject = populatePartidaObject(partidaDic)
+            
+            
         }
         
         
         return PartidaResponse()
     }
     
-    
+    private class func populatePartidaObject(_ partidaDic: NSDictionary) -> Partida {
+        
+        print("👉... partidaDic: \(String(describing: partidaDic["clube_casa_id"]))")
+        
+        return Partida()
+        
+    }
 }
