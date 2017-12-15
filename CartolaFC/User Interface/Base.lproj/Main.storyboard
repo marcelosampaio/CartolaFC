@@ -29,33 +29,33 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Melhores do Campeonato" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XjS-1Y-UHu">
-                                                    <rect key="frame" x="85" y="19" width="219" height="61"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trophy" translatesAutoresizingMaskIntoConstraints="NO" id="zdZ-Ul-0Bu">
+                                                    <rect key="frame" x="16" y="30" width="40" height="40"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="61" id="16V-0e-0G4"/>
-                                                        <constraint firstAttribute="width" secondItem="XjS-1Y-UHu" secondAttribute="height" multiplier="219:61" id="QWH-mE-yb9"/>
+                                                        <constraint firstAttribute="width" constant="40" id="YKU-GZ-LhM"/>
+                                                        <constraint firstAttribute="height" constant="40" id="v22-H8-Nps"/>
+                                                        <constraint firstAttribute="width" secondItem="zdZ-Ul-0Bu" secondAttribute="height" multiplier="1:1" id="xeu-Aj-qsV"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Melhores do Campeonato" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XjS-1Y-UHu">
+                                                    <rect key="frame" x="64" y="30" width="240" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="l9T-Bt-ui5"/>
+                                                        <constraint firstAttribute="width" secondItem="XjS-1Y-UHu" secondAttribute="height" multiplier="6:1" id="vRc-dT-7qc"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trophy" translatesAutoresizingMaskIntoConstraints="NO" id="zdZ-Ul-0Bu">
-                                                    <rect key="frame" x="16" y="19" width="61" height="61"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="61" id="2i3-E5-bKO"/>
-                                                        <constraint firstAttribute="width" secondItem="zdZ-Ul-0Bu" secondAttribute="height" multiplier="1:1" id="TEk-qt-1T7"/>
-                                                        <constraint firstAttribute="height" constant="61" id="Tad-vd-XZq"/>
-                                                    </constraints>
-                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="zdZ-Ul-0Bu" firstAttribute="top" secondItem="EQk-Db-vc4" secondAttribute="topMargin" constant="8" id="Rq0-i0-I6e"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="XjS-1Y-UHu" secondAttribute="bottom" constant="9" id="V0a-bI-9kH"/>
-                                                <constraint firstItem="XjS-1Y-UHu" firstAttribute="leading" secondItem="zdZ-Ul-0Bu" secondAttribute="trailing" constant="8" id="YZO-T5-jDO"/>
-                                                <constraint firstItem="zdZ-Ul-0Bu" firstAttribute="leading" secondItem="EQk-Db-vc4" secondAttribute="leadingMargin" id="aOg-WE-BJf"/>
-                                                <constraint firstItem="XjS-1Y-UHu" firstAttribute="top" secondItem="EQk-Db-vc4" secondAttribute="topMargin" constant="8" id="iTC-qn-ppa"/>
-                                                <constraint firstItem="XjS-1Y-UHu" firstAttribute="trailing" secondItem="EQk-Db-vc4" secondAttribute="trailingMargin" id="xzp-hq-lMH"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="zdZ-Ul-0Bu" secondAttribute="bottom" constant="9" id="zhQ-a4-aa6"/>
+                                                <constraint firstItem="XjS-1Y-UHu" firstAttribute="top" secondItem="EQk-Db-vc4" secondAttribute="topMargin" constant="19" id="07u-p6-URe"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="zdZ-Ul-0Bu" secondAttribute="bottom" constant="19" id="1xj-U8-7Rh"/>
+                                                <constraint firstItem="zdZ-Ul-0Bu" firstAttribute="top" secondItem="EQk-Db-vc4" secondAttribute="topMargin" constant="19" id="6iK-bc-0fB"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="XjS-1Y-UHu" secondAttribute="bottom" constant="19" id="RWh-58-bn1"/>
+                                                <constraint firstItem="XjS-1Y-UHu" firstAttribute="trailing" secondItem="EQk-Db-vc4" secondAttribute="trailingMargin" id="VbP-uq-7VN"/>
+                                                <constraint firstItem="zdZ-Ul-0Bu" firstAttribute="leading" secondItem="EQk-Db-vc4" secondAttribute="leadingMargin" id="jiR-Ih-Kas"/>
+                                                <constraint firstItem="XjS-1Y-UHu" firstAttribute="leading" secondItem="zdZ-Ul-0Bu" secondAttribute="trailing" constant="8" id="pr1-c5-lmv"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -70,33 +70,33 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Última Rodada" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ksn-Ev-HPR">
-                                                    <rect key="frame" x="85" y="19" width="219" height="61"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ball" translatesAutoresizingMaskIntoConstraints="NO" id="BVU-r5-eYo">
+                                                    <rect key="frame" x="16" y="30" width="40" height="40"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="Ksn-Ev-HPR" secondAttribute="height" multiplier="219:61" id="Aqs-jb-k3i"/>
-                                                        <constraint firstAttribute="height" constant="61" id="GdO-Oj-Jbc"/>
+                                                        <constraint firstAttribute="width" constant="40" id="7IQ-NV-HhQ"/>
+                                                        <constraint firstAttribute="width" secondItem="BVU-r5-eYo" secondAttribute="height" multiplier="1:1" id="Pql-mS-ZG3"/>
+                                                        <constraint firstAttribute="height" constant="40" id="X6t-7z-PLt"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Última Rodada" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ksn-Ev-HPR">
+                                                    <rect key="frame" x="64" y="30" width="240" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="Ksn-Ev-HPR" secondAttribute="height" multiplier="6:1" id="MYc-y1-4Hf"/>
+                                                        <constraint firstAttribute="height" constant="40" id="iv4-ys-Xkx"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ball" translatesAutoresizingMaskIntoConstraints="NO" id="BVU-r5-eYo">
-                                                    <rect key="frame" x="16" y="19" width="61" height="61"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="61" id="SV5-hb-KSn"/>
-                                                        <constraint firstAttribute="width" secondItem="BVU-r5-eYo" secondAttribute="height" multiplier="1:1" id="jar-so-h67"/>
-                                                        <constraint firstAttribute="width" constant="61" id="r44-km-QMB"/>
-                                                    </constraints>
-                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Ksn-Ev-HPR" secondAttribute="bottom" constant="9" id="ALt-ea-yBX"/>
-                                                <constraint firstItem="BVU-r5-eYo" firstAttribute="top" secondItem="6LB-G4-PVt" secondAttribute="topMargin" constant="8" id="Azr-LF-YRA"/>
-                                                <constraint firstItem="BVU-r5-eYo" firstAttribute="leading" secondItem="6LB-G4-PVt" secondAttribute="leadingMargin" id="Jg7-EB-zbu"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="BVU-r5-eYo" secondAttribute="bottom" constant="9" id="MDV-Qa-oJd"/>
-                                                <constraint firstItem="Ksn-Ev-HPR" firstAttribute="top" secondItem="6LB-G4-PVt" secondAttribute="topMargin" constant="8" id="MYe-ft-Xjd"/>
-                                                <constraint firstItem="Ksn-Ev-HPR" firstAttribute="leading" secondItem="BVU-r5-eYo" secondAttribute="trailing" constant="8" id="eNP-hj-g2c"/>
-                                                <constraint firstItem="Ksn-Ev-HPR" firstAttribute="trailing" secondItem="6LB-G4-PVt" secondAttribute="trailingMargin" id="p7b-rf-Ifx"/>
+                                                <constraint firstItem="Ksn-Ev-HPR" firstAttribute="trailing" secondItem="6LB-G4-PVt" secondAttribute="trailingMargin" id="4UE-db-KiI"/>
+                                                <constraint firstItem="BVU-r5-eYo" firstAttribute="top" secondItem="6LB-G4-PVt" secondAttribute="topMargin" constant="19" id="9j4-qs-txr"/>
+                                                <constraint firstItem="Ksn-Ev-HPR" firstAttribute="leading" secondItem="BVU-r5-eYo" secondAttribute="trailing" constant="8" id="DXR-gq-90b"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="BVU-r5-eYo" secondAttribute="bottom" constant="19" id="HV9-xg-JQx"/>
+                                                <constraint firstItem="Ksn-Ev-HPR" firstAttribute="top" secondItem="6LB-G4-PVt" secondAttribute="topMargin" constant="19" id="QRf-L0-LNJ"/>
+                                                <constraint firstItem="BVU-r5-eYo" firstAttribute="leading" secondItem="6LB-G4-PVt" secondAttribute="leadingMargin" id="SxK-C1-uif"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Ksn-Ev-HPR" secondAttribute="bottom" constant="19" id="vq7-Ru-qc0"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
