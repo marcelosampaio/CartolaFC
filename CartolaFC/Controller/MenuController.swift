@@ -20,7 +20,7 @@ class MenuController: UITableViewController {
     
     // MARK: - Table View Delegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("☘️ selected row \(indexPath.section)")
+        
         if indexPath.section == 0 {
             // Top
             performSegue(withIdentifier: "showTopTeams", sender: nil)

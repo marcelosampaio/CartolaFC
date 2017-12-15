@@ -15,6 +15,7 @@
 		8270E6861FE3351600813DAA /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8270E6851FE3351600813DAA /* MenuController.swift */; };
 		8270E6881FE3363B00813DAA /* TopController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8270E6871FE3363B00813DAA /* TopController.swift */; };
 		8270E68A1FE3365F00813DAA /* MatchesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8270E6891FE3365F00813DAA /* MatchesController.swift */; };
+		8270E68D1FE3E8D200813DAA /* TopTeamsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8270E68C1FE3E8D200813DAA /* TopTeamsCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		8270E6851FE3351600813DAA /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		8270E6871FE3363B00813DAA /* TopController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopController.swift; sourceTree = "<group>"; };
 		8270E6891FE3365F00813DAA /* MatchesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesController.swift; sourceTree = "<group>"; };
+		8270E68C1FE3E8D200813DAA /* TopTeamsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTeamsCell.swift; sourceTree = "<group>"; };
 		F07E2EF6D46416F4123963A5 /* Pods-CartolaFC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CartolaFC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CartolaFC/Pods-CartolaFC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,6 +76,7 @@
 		8270E66F1FE3306600813DAA /* CartolaFC */ = {
 			isa = PBXGroup;
 			children = (
+				8270E68B1FE3E8A100813DAA /* Custom Cell */,
 				8270E6841FE330A200813DAA /* Controller */,
 				8270E6831FE3309900813DAA /* Model */,
 				8270E6821FE3308300813DAA /* User Interface */,
@@ -108,6 +111,14 @@
 				8270E6891FE3365F00813DAA /* MatchesController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		8270E68B1FE3E8A100813DAA /* Custom Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8270E68C1FE3E8D200813DAA /* TopTeamsCell.swift */,
+			);
+			path = "Custom Cell";
 			sourceTree = "<group>";
 		};
 		C271C98322AEBB9CB1F8D70E /* Frameworks */ = {
@@ -241,6 +252,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8270E68D1FE3E8D200813DAA /* TopTeamsCell.swift in Sources */,
 				8270E6881FE3363B00813DAA /* TopController.swift in Sources */,
 				8270E6861FE3351600813DAA /* MenuController.swift in Sources */,
 				8270E6711FE3306600813DAA /* AppDelegate.swift in Sources */,
