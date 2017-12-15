@@ -16,16 +16,11 @@ class ServiceAPI: NSObject {
 
         // get url
         let url = getPlist(key: "getCartolaData")
-        
-        print("🍟 -> getCartolaData url: \(url)")
-        
-        
+
         Alamofire.request(url).responseJSON { (response) -> Void in
             if response.result.isSuccess {
                 
                 var partidaResponse = PartidaResponse()
-                
-                print("🍟  RESPONSE OK")
 
                 if let result = response.result.value {
                     let resultDic = result as! NSDictionary
@@ -73,7 +68,7 @@ class ServiceAPI: NSObject {
         }
         
         // populate "clubes"
-        for (key, value) in clubesDic {
+        for (_, value) in clubesDic {
             let clubeDic = value as! NSDictionary
             let clubeObject = populateClubeObject(clubeDic)
             partidaResponse.clubes.append(clubeObject)
@@ -82,7 +77,7 @@ class ServiceAPI: NSObject {
         // populate "rodada"
         partidaResponse.rodada = String(describing: dic["rodada"]!)
         
-        return PartidaResponse()
+        return partidaResponse
     }
     
     private class func populatePartidaObject(_ partidaDic: NSDictionary) -> Partida {
@@ -115,7 +110,6 @@ class ServiceAPI: NSObject {
 
         // populate "escudos"
         for (key, value) in escudosDic {
-            print("👉 escudos key: \(key)  👉 value: \(value)")
             let escudoStr = value as! String
             let escudoTamanho = key as! String
             let escudoObject = populateEscudoObject(escudoStr: escudoStr, escudoTamanho: escudoTamanho)

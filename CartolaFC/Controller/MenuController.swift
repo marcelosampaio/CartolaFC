@@ -10,6 +10,9 @@ import UIKit
 
 class MenuController: UITableViewController {
 
+    // MARK: - Properties
+    var partidaResponse = PartidaResponse()
+    
     
     // MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -23,8 +26,10 @@ class MenuController: UITableViewController {
 
     // MARK: - Application Data Source
     private func getCartolaData() {
-        ServiceAPI.getCartolaData(success: { (partidaResponse) in
+        ServiceAPI.getCartolaData(success: { (response) in
             // completion success
+            self.partidaResponse = response
+            
         }) { (error) in
             // error
             self.alert(message: "Problemas ao recuperar os dados do Cartola FC.")
@@ -48,9 +53,12 @@ class MenuController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         print("🚩 prepare for segue  🚩")
         if segue.identifier == "showTopTeams" {
-            print("🚩 TOP 10")
+            let controller = segue.destination as! TopController
+            controller.clubes = partidaResponse.clubes
+            
         }else if segue.identifier == "showMatches"{
-            print("🚩PARTIDAS")
+            let controller = segue.destination as! MatchesController
+            controller.partidaResponse = partidaResponse
         }
     }
     
