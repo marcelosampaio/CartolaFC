@@ -20,7 +20,7 @@ class TopController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         appearance()
-        organizer(asc: true)
+        organizer(asc: false)
         
         
     }
@@ -38,15 +38,16 @@ class TopController: UITableViewController {
         
         // just 10 occurrences
         organizedResult.removeAll()
+        let listCount = 10
         if asc {
             for i in 0..<sortedClubes.count - 1 {
-                if i < 10 {
+                if i < listCount {
                     organizedResult.append(sortedClubes[i])
                 }
             }
         } else {
             for i in (0..<sortedClubes.count).reversed() {
-                if i < 10 {
+                if i < listCount {
                     organizedResult.append(sortedClubes[i])
                 }
             }
