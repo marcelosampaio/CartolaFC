@@ -1,5 +1,5 @@
 # CartolaFC
-Projeto Swift para Desafio
+Projeto Swift 4 para Desafio
 
 # Objetivo
 O desafio consiste em desenvolver um aplicativo para iOS utilizando a linguagem Swift, que consuma o endpoint [https://api.cartolafc.globo.com/partidas] e exiba as seguintes informações:
