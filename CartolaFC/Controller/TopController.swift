@@ -32,7 +32,7 @@ class TopController: UITableViewController {
         tableView.backgroundColor = UIColor.backgroundColor
         
         //////
-        let rightBarButton = UIBarButtonItem(title: "▲ ▼", style: UIBarButtonItemStyle.plain, target: self, action: #selector(sortResult(_:)))
+        let rightBarButton = UIBarButtonItem(title: "▲▼", style: UIBarButtonItemStyle.plain, target: self, action: #selector(sortResult(_:)))
         self.navigationItem.rightBarButtonItem = rightBarButton
         //////
     }
