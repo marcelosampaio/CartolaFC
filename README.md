@@ -12,3 +12,11 @@ Cada lista deverá ser apresentada em uma tela diferente.
 
 # Considerações Importantes
 Com a exibição das partidas da última rodada do campeonato de 2017 adicionamos os resultados das partidas jogadas à lista.
+
+# Resultado
+
+![c1](https://user-images.githubusercontent.com/3922656/34073931-4bb31782-e28c-11e7-88f2-6d9cfdfadebf.png)
+
+![c2](https://user-images.githubusercontent.com/3922656/34073933-58a5b440-e28c-11e7-9c81-fbd70916ef66.png)
+
+![c3](https://user-images.githubusercontent.com/3922656/34073935-683bf1bc-e28c-11e7-9b91-f6af6cd771bd.png)
