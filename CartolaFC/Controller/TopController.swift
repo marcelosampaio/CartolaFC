@@ -15,12 +15,13 @@ class TopController: UITableViewController {
     var clubes = [Clube]()
     var sortedClubes = [Clube]()
     var organizedResult = [Clube]()
+    var sortControl = true
     
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         appearance()
-        organizer(asc: false)
+        organizer(asc: sortControl)
         
         
     }
@@ -29,6 +30,11 @@ class TopController: UITableViewController {
     private func appearance() {
         navigationItem.title = "Top 10"
         tableView.backgroundColor = UIColor.backgroundColor
+        
+        //////
+        let rightBarButton = UIBarButtonItem(title: "▲ ▼", style: UIBarButtonItemStyle.plain, target: self, action: #selector(sortResult(_:)))
+        self.navigationItem.rightBarButtonItem = rightBarButton
+        //////
     }
 
     // MARK: - Helper
@@ -52,6 +58,7 @@ class TopController: UITableViewController {
                 }
             }
         }
+        tableView.reloadData()
     }
     
     // MARK: - Table View DataSource and Delegate
@@ -84,5 +91,18 @@ class TopController: UITableViewController {
         return 120
     }
 
+    // MARK: - UI Actions
+    @objc func sortResult(_ sender:UIBarButtonItem!)
+    {
+        print("👍 sortResult")
+        if sortControl {
+            sortControl = false
+        }else{
+            sortControl = true
+        }
+
+        organizer(asc: sortControl)
+    }
+    
 
 }
