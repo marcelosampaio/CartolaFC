@@ -15,8 +15,6 @@ Com a exibição das partidas da última rodada do campeonato de 2017 adicionamo
 
 # Resultado
 
-![c1](https://user-images.githubusercontent.com/3922656/34073931-4bb31782-e28c-11e7-88f2-6d9cfdfadebf.png)
-
-![c2](https://user-images.githubusercontent.com/3922656/34073933-58a5b440-e28c-11e7-9c81-fbd70916ef66.png)
-
-![c3](https://user-images.githubusercontent.com/3922656/34073935-683bf1bc-e28c-11e7-9b91-f6af6cd771bd.png)
+![crt1](https://user-images.githubusercontent.com/3922656/34073974-f873d61e-e28c-11e7-9602-8d1cd5f067b7.png)
+![crt2](https://user-images.githubusercontent.com/3922656/34073978-ffc1f8c4-e28c-11e7-844b-af35b2b03147.png)
+![crt3](https://user-images.githubusercontent.com/3922656/34073981-059a6ccc-e28d-11e7-905e-394cf1ee562e.png)
