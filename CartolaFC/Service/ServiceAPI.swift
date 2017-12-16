@@ -104,8 +104,7 @@ class ServiceAPI: NSObject {
         clube.clube_id = String(describing: clubeDic["id"]!)
         clube.nome = clubeDic["nome"] as? String
         clube.abreviacao = clubeDic["abreviacao"] as? String
-        clube.posicao = String(describing: clubeDic["posicao"]!)
-        
+        clube.posicao = clubeDic["posicao"]! as? Int
         let escudosDic = clubeDic["escudos"] as! NSDictionary
 
         // populate "escudos"

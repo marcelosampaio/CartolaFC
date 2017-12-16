@@ -12,14 +12,14 @@ struct Clube {
     var clube_id: String?
     var nome: String?
     var abreviacao: String?
-    var posicao: String?
+    var posicao: Int?
     var escudos = [Escudo]()
     
     init(){
         self.clube_id = String()
         self.nome = String()
         self.abreviacao = String()
-        self.posicao = String()
+        self.posicao = 0
         self.escudos = [Escudo]()
     }
     

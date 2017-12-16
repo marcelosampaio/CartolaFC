@@ -13,12 +13,13 @@ class TopController: UITableViewController {
     
     // MARK: - Properties
     var clubes = [Clube]()
-    
+    var sortedClubes = [Clube]()
 
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-         appearance()
+        appearance()
+        sortedClubes = clubes.sorted(by: { $0.posicao! < $1.posicao! })
         
     }
 
@@ -35,14 +36,14 @@ class TopController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return clubes.count
+        return sortedClubes.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TopTeamsCell
-        let clube = clubes[indexPath.row]
+        let clube = sortedClubes[indexPath.row]
         cell.name.text = clube.nome
-        cell.position.text = clube.posicao! + "º"
+        cell.position.text = String(clube.posicao!) + "º"
         
         if clube.escudos[0].url == nil {
             cell.badge.image = UIImage(named: "ball")
@@ -50,7 +51,6 @@ class TopController: UITableViewController {
             let url = URL(string: clube.escudos[0].url!)
             // image
             cell.badge?.kf.setImage(with: url)
-            
         }
 
         return cell
