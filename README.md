@@ -11,9 +11,5 @@ O desafio consiste em desenvolver um aplicativo para iOS utilizando a linguagem 
 Cada lista deverá ser apresentada em uma tela diferente.
 
 # Blibliotecas Utilizadas
-• Alamofire
-- Essa lista deve mostrar a posição, o escudo e o nome do clube.
-- A lista deve permitir uma ordenação crescente ou decrescente.
-• Kingfisher
-- Essa lista deve mostrar os escudos e abreviação de ambos os clubes, além de informar a data, horário e local de cada partida. - A lista deve ser ordenada pela data e horário das partidas.
-Cada lista deverá ser apresentada em uma tela diferente.
+  Alamofire
+  Kingfisher
