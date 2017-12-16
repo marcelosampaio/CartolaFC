@@ -40,9 +40,13 @@ class MatchesController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! MatchesCell
         let partida = partidaResponse.partidas[indexPath.row]
-
+        let cell = getCell(cell: tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! MatchesCell, partida: partida)
+        return cell
+    }
+    
+    // MARK: - Table View Helper
+    private func getCell(cell: MatchesCell, partida: Partida) -> MatchesCell {
         // name
         cell.name1.text = getTeamName(partida.clube_casa_id!)
         cell.name2.text = getTeamName(partida.clube_visitante_id!)
