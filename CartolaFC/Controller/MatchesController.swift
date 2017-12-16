@@ -12,11 +12,16 @@ class MatchesController: UITableViewController {
 
     // MARK: - Properties
     var partidaResponse = PartidaResponse()
+    var sortedPartidas = [Partida]()
     
     
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // sort by date and time
+        sortedPartidas = partidaResponse.partidas.sorted(by: { $0.partida_data! < $1.partida_data! })
+        
         appearance()
     }
 
@@ -29,18 +34,17 @@ class MatchesController: UITableViewController {
     
 
     // MARK: - Table View Data Source and Delegate
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return partidaResponse.partidas.count
+        return sortedPartidas.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let partida = partidaResponse.partidas[indexPath.row]
+        let partida = sortedPartidas[indexPath.row]
         let cell = getCell(cell: tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! MatchesCell, partida: partida)
         return cell
     }
