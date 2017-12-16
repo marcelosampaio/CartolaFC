@@ -47,6 +47,9 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="E1p-KE-2TF">
+                                                    <rect key="frame" x="150" y="40" width="20" height="20"/>
+                                                </activityIndicatorView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="XjS-1Y-UHu" firstAttribute="top" secondItem="EQk-Db-vc4" secondAttribute="topMargin" constant="19" id="07u-p6-URe"/>
@@ -54,6 +57,8 @@
                                                 <constraint firstItem="zdZ-Ul-0Bu" firstAttribute="top" secondItem="EQk-Db-vc4" secondAttribute="topMargin" constant="19" id="6iK-bc-0fB"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="XjS-1Y-UHu" secondAttribute="bottom" constant="19" id="RWh-58-bn1"/>
                                                 <constraint firstItem="XjS-1Y-UHu" firstAttribute="trailing" secondItem="EQk-Db-vc4" secondAttribute="trailingMargin" id="VbP-uq-7VN"/>
+                                                <constraint firstItem="E1p-KE-2TF" firstAttribute="centerY" secondItem="EQk-Db-vc4" secondAttribute="centerY" id="Xff-DO-gym"/>
+                                                <constraint firstItem="E1p-KE-2TF" firstAttribute="centerX" secondItem="EQk-Db-vc4" secondAttribute="centerX" id="eao-yM-KLU"/>
                                                 <constraint firstItem="zdZ-Ul-0Bu" firstAttribute="leading" secondItem="EQk-Db-vc4" secondAttribute="leadingMargin" id="jiR-Ih-Kas"/>
                                                 <constraint firstItem="XjS-1Y-UHu" firstAttribute="leading" secondItem="zdZ-Ul-0Bu" secondAttribute="trailing" constant="8" id="pr1-c5-lmv"/>
                                             </constraints>
@@ -88,14 +93,19 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="3wO-I4-y2w">
+                                                    <rect key="frame" x="150" y="40" width="20" height="20"/>
+                                                </activityIndicatorView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Ksn-Ev-HPR" firstAttribute="trailing" secondItem="6LB-G4-PVt" secondAttribute="trailingMargin" id="4UE-db-KiI"/>
                                                 <constraint firstItem="BVU-r5-eYo" firstAttribute="top" secondItem="6LB-G4-PVt" secondAttribute="topMargin" constant="19" id="9j4-qs-txr"/>
+                                                <constraint firstItem="3wO-I4-y2w" firstAttribute="centerX" secondItem="6LB-G4-PVt" secondAttribute="centerX" id="Bai-hT-XLg"/>
                                                 <constraint firstItem="Ksn-Ev-HPR" firstAttribute="leading" secondItem="BVU-r5-eYo" secondAttribute="trailing" constant="8" id="DXR-gq-90b"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="BVU-r5-eYo" secondAttribute="bottom" constant="19" id="HV9-xg-JQx"/>
                                                 <constraint firstItem="Ksn-Ev-HPR" firstAttribute="top" secondItem="6LB-G4-PVt" secondAttribute="topMargin" constant="19" id="QRf-L0-LNJ"/>
                                                 <constraint firstItem="BVU-r5-eYo" firstAttribute="leading" secondItem="6LB-G4-PVt" secondAttribute="leadingMargin" id="SxK-C1-uif"/>
+                                                <constraint firstItem="3wO-I4-y2w" firstAttribute="centerY" secondItem="6LB-G4-PVt" secondAttribute="centerY" id="new-ln-aR4"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="Ksn-Ev-HPR" secondAttribute="bottom" constant="19" id="vq7-Ru-qc0"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -110,6 +120,8 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Cartola FC" id="RBz-Aj-gLO"/>
                     <connections>
+                        <outlet property="matchActivityIndicator" destination="3wO-I4-y2w" id="Na4-OB-gHI"/>
+                        <outlet property="topActivityIndicator" destination="E1p-KE-2TF" id="CqD-rh-4Wu"/>
                         <segue destination="uli-Vs-yxS" kind="show" identifier="showTopTeams" id="Ncv-F9-SEV"/>
                         <segue destination="k7T-UY-5SP" kind="show" identifier="showMatches" id="HKx-Xl-UJK"/>
                     </connections>

@@ -9,7 +9,12 @@
 import UIKit
 
 class MenuController: UITableViewController {
-
+    
+    // MARK: - Outlets
+    
+    @IBOutlet weak var topActivityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var matchActivityIndicator: UIActivityIndicatorView!
+    
     // MARK: - Properties
     var partidaResponse = PartidaResponse()
     
@@ -19,6 +24,7 @@ class MenuController: UITableViewController {
         super.viewDidLoad()
         
         // get cartola data
+        activitiesIndicators(true)
         getCartolaData()
         
         
@@ -29,9 +35,11 @@ class MenuController: UITableViewController {
         ServiceAPI.getCartolaData(success: { (response) in
             // completion success
             self.partidaResponse = response
+            self.activitiesIndicators(false)
             
         }) { (error) in
             // error
+            self.activitiesIndicators(false)
             self.alert(message: "Problemas ao recuperar os dados do Cartola FC.")
         }
     }
@@ -69,6 +77,9 @@ class MenuController: UITableViewController {
         
         let okAction = UIAlertAction(title: "OK", style: .cancel) { (action) in
             // OK
+            // get cartola data
+            self.activitiesIndicators(true)
+            self.getCartolaData()
         }
         alertController.addAction(okAction)
         self.present(alertController, animated: true) {
@@ -78,5 +89,17 @@ class MenuController: UITableViewController {
         
     }
     
+    // MARK: - App Helper
+    private func activitiesIndicators(_ show: Bool) {
+        topActivityIndicator.isHidden = !show
+        matchActivityIndicator.isHidden = !show
+        if show {
+            topActivityIndicator.startAnimating()
+            matchActivityIndicator.startAnimating()
+        }else{
+            topActivityIndicator.stopAnimating()
+            matchActivityIndicator.stopAnimating()
+        }
+    }
     
 }
