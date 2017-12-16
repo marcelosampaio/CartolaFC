@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--CartolaFC-->
+        <!--Cartola FC-->
         <scene sceneID="hez-DK-KoE">
             <objects>
                 <tableViewController storyboardIdentifier="MenuController" id="LBt-ov-Cky" customClass="MenuController" customModule="CartolaFC" customModuleProvider="target" sceneMemberID="viewController">
@@ -108,7 +108,7 @@
                             <outlet property="delegate" destination="LBt-ov-Cky" id="GhC-Nj-8Gu"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="CartolaFC" id="RBz-Aj-gLO"/>
+                    <navigationItem key="navigationItem" title="Cartola FC" id="RBz-Aj-gLO"/>
                     <connections>
                         <segue destination="uli-Vs-yxS" kind="show" identifier="showTopTeams" id="Ncv-F9-SEV"/>
                         <segue destination="k7T-UY-5SP" kind="show" identifier="showMatches" id="HKx-Xl-UJK"/>
@@ -217,7 +217,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="140" id="Qjd-am-rdf" customClass="MatchesCell" customModule="CartolaFC" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="140" id="Qjd-am-rdf" customClass="MatchesCell" customModule="CartolaFC" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="320" height="140"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qjd-am-rdf" id="e5M-ea-gUU">

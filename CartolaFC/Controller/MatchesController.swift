@@ -22,7 +22,7 @@ class MatchesController: UITableViewController {
 
     // MARK: - Appearance
     private func appearance() {
-        navigationItem.title = "Rodada"
+        navigationItem.title = "Partidas"
     }
     
     
