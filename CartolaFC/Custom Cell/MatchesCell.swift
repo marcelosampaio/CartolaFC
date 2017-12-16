@@ -20,6 +20,11 @@ class MatchesCell: UITableViewCell {
     @IBOutlet weak var dateTime: UILabel!
     @IBOutlet weak var stadium: UILabel!
     
+    @IBOutlet weak var score1: UILabel!
+    @IBOutlet weak var score2: UILabel!
+    
+    
+    @IBOutlet weak var borderVIew: UIView!
     
     // MARK: - Cell
     override func awakeFromNib() {

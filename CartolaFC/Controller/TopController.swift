@@ -30,11 +30,10 @@ class TopController: UITableViewController {
     private func appearance() {
         navigationItem.title = "Top 10"
         tableView.backgroundColor = UIColor.backgroundColor
-        
-        //////
+        // bar button item
         let rightBarButton = UIBarButtonItem(title: "▲▼", style: UIBarButtonItemStyle.plain, target: self, action: #selector(sortResult(_:)))
         self.navigationItem.rightBarButtonItem = rightBarButton
-        //////
+        
     }
 
     // MARK: - Helper

@@ -23,6 +23,7 @@ class MatchesController: UITableViewController {
     // MARK: - Appearance
     private func appearance() {
         navigationItem.title = "Partidas"
+        self.view.backgroundColor = UIColor.backgroundColor
     }
     
     
@@ -42,12 +43,33 @@ class MatchesController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! MatchesCell
         let partida = partidaResponse.partidas[indexPath.row]
 
-        
+        // name
         cell.name1.text = getTeamName(partida.clube_casa_id!)
         cell.name2.text = getTeamName(partida.clube_visitante_id!)
+        // score
+        cell.score1.text = partida.placar_oficial_mandante
+        cell.score2.text = partida.placar_oficial_visitante
+        // other info
         cell.dateTime.text = getFormattedDate(partida.partida_data!)
         cell.stadium.text = partida.local!
-
+        
+        // bagdes
+        var url = getTeamBadge(partida.clube_casa_id!)
+        if url == "" {
+            cell.badge1.image = UIImage(named: "ball")
+        }else{
+            let url = URL(string: url)
+            // image
+            cell.badge1?.kf.setImage(with: url)
+        }
+        url = getTeamBadge(partida.clube_visitante_id!)
+        if url == "" {
+            cell.badge2.image = UIImage(named: "ball")
+        }else{
+            let url = URL(string: url)
+            // image
+            cell.badge2.kf.setImage(with: url)
+        }
         return cell
     }
  
@@ -60,6 +82,16 @@ class MatchesController: UITableViewController {
         }
         return ""
     }
+    
+    private func getTeamBadge(_ id: String) -> String {
+        for clube in partidaResponse.clubes {
+            if clube.clube_id == id {
+                return clube.escudos[0].url!
+            }
+        }
+        return ""
+    }
+    
     
     private func getFormattedDate(_ dateString: String) -> String {
         let dateTimeArray = dateString.components(separatedBy: " ")

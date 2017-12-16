@@ -148,7 +148,6 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flamengo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tUo-tx-uxE">
                                                     <rect key="frame" x="56" y="30" width="176" height="40"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="tUo-tx-uxE" secondAttribute="height" multiplier="22:5" id="CWH-pV-a38"/>
                                                         <constraint firstAttribute="height" constant="40" id="R0z-iK-yIR"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
@@ -224,7 +223,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="169.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KDT-ax-dCS" userLabel="BackgroundView">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KDT-ax-dCS" userLabel="BorderView">
                                             <rect key="frame" x="16" y="11" width="288" height="150"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12/12/2017 19:00h" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rtx-F2-QTi">
@@ -288,7 +287,7 @@
                                                                 <constraint firstAttribute="width" secondItem="jgP-zz-5L8" secondAttribute="height" multiplier="1:2" id="DLy-Pz-kGa"/>
                                                                 <constraint firstAttribute="height" constant="40" id="rYp-T4-P9y"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -339,7 +338,7 @@
                                                                 <constraint firstAttribute="height" constant="40" id="dHK-oK-I9m"/>
                                                                 <constraint firstAttribute="width" constant="20" id="jEA-Ju-YoR"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -396,9 +395,12 @@
                                 <connections>
                                     <outlet property="badge1" destination="3j3-JG-nkA" id="Pxp-if-cPm"/>
                                     <outlet property="badge2" destination="ygZ-qa-Dmd" id="FVg-W7-OtD"/>
+                                    <outlet property="borderVIew" destination="KDT-ax-dCS" id="O0b-vy-ha1"/>
                                     <outlet property="dateTime" destination="Rtx-F2-QTi" id="DXV-rW-2a6"/>
                                     <outlet property="name1" destination="JSl-M0-lWy" id="qVp-wu-0vI"/>
                                     <outlet property="name2" destination="BQI-5B-xnI" id="Gb0-2k-ZKf"/>
+                                    <outlet property="score1" destination="jgP-zz-5L8" id="PMr-aJ-JSW"/>
+                                    <outlet property="score2" destination="nZX-Yd-Vvc" id="ptl-tE-eQa"/>
                                     <outlet property="stadium" destination="vHX-cy-oyF" id="pH9-Yf-vNH"/>
                                 </connections>
                             </tableViewCell>
