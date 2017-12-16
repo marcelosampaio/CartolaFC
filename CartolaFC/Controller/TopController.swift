@@ -24,6 +24,7 @@ class TopController: UITableViewController {
 
     // MARK: - Appearance
     private func appearance() {
+        navigationItem.title = "Top 10"
         tableView.backgroundColor = UIColor.backgroundColor
         
     }
@@ -51,12 +52,13 @@ class TopController: UITableViewController {
             cell.badge?.kf.setImage(with: url)
             
         }
-        
-        
 
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120
+    }
 
 
 }

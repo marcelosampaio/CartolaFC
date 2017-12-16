@@ -17,8 +17,15 @@ class MatchesController: UITableViewController {
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        appearance()
     }
 
+    // MARK: - Appearance
+    private func appearance() {
+        navigationItem.title = "Rodada"
+    }
+    
+    
 
     // MARK: - Table View Data Source and Delegate
 

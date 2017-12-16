@@ -12,7 +12,7 @@ import UIKit
 public extension UIColor {
     class var backgroundColor: UIColor {
         get {
-            return UIColor(red: 250/255, green: 250/255, blue: 250/255, alpha: 1)
+            return UIColor(red: 240/255, green: 240/255, blue: 240/255, alpha: 1)
         }
     }
 }
