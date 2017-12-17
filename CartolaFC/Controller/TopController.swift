@@ -93,13 +93,7 @@ class TopController: UITableViewController {
     // MARK: - UI Actions
     @objc func sortResult(_ sender:UIBarButtonItem!)
     {
-        print("👍 sortResult")
-        if sortControl {
-            sortControl = false
-        }else{
-            sortControl = true
-        }
-
+        sortControl = !sortControl
         organizer(asc: sortControl)
     }
     

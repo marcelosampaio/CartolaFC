@@ -17,5 +17,9 @@ struct Escudo {
         self.url = String()
     }
     
+    init(escudoStr: String, escudoTamanho: String) {
+        self.tamanho = escudoTamanho
+        self.url = escudoStr
+    }
     
 }

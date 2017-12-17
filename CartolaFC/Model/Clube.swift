@@ -23,5 +23,23 @@ struct Clube {
         self.escudos = [Escudo]()
     }
     
+    init(dictionary: NSDictionary) {
+        
+        self.clube_id = String(describing: dictionary["id"]!)
+        self.nome = dictionary["nome"] as? String
+        self.abreviacao = dictionary["abreviacao"] as? String
+        self.posicao = dictionary["posicao"]! as? Int
+        let escudosDic = dictionary["escudos"] as! NSDictionary
+        
+        // populate "escudos"
+        for (key, value) in escudosDic {
+            let escudoStr = value as! String
+            let escudoTamanho = key as! String
+            let escudoObject = Escudo.init(escudoStr: escudoStr, escudoTamanho: escudoTamanho)
+            self.escudos.append(escudoObject)
+        }
+        
+    }
+    
     
 }

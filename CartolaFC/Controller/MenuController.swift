@@ -59,7 +59,6 @@ class MenuController: UITableViewController {
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("🚩 prepare for segue  🚩")
         if segue.identifier == "showTopTeams" {
             let controller = segue.destination as! TopController
             controller.clubes = partidaResponse.clubes

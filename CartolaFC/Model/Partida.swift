@@ -42,5 +42,21 @@ struct Partida {
         
     }
     
+    init(dictionary: NSDictionary) {
+        self.partida_id = String(describing: dictionary["partida_id"]!)
+        self.clube_casa_id = String(describing: dictionary["clube_casa_id"]!)
+        self.clube_casa_posicao = String(describing: dictionary["clube_casa_posicao"]!)
+        self.clube_visitante_id = String(describing: dictionary["clube_visitante_id"]!)
+        self.aproveitamento_mandante = (dictionary["aproveitamento_mandante"] as? [String])!
+        self.aproveitamento_visitante = (dictionary["aproveitamento_visitante"] as? [String])!
+        self.clube_visitante_posicao = String(describing: dictionary["clube_visitante_posicao"]!)
+        self.partida_data = dictionary["partida_data"] as? String
+        self.local = dictionary["local"] as? String
+        self.valida = (dictionary["valida"] as? Bool)!
+        self.placar_oficial_mandante = String(describing: dictionary["placar_oficial_mandante"]!)
+        self.placar_oficial_visitante = String(describing: dictionary["placar_oficial_visitante"]!)
+        self.url_confronto = dictionary["url_confronto"] as? String
+        self.url_transmissao = dictionary["url_transmissao"] as? String
+    }
     
 }
