@@ -24,7 +24,6 @@ class MenuController: UITableViewController {
         super.viewDidLoad()
         
         // get cartola data
-        activitiesIndicators(true)
         getCartolaData()
         
         
@@ -32,6 +31,7 @@ class MenuController: UITableViewController {
 
     // MARK: - Application Data Source
     private func getCartolaData() {
+        activitiesIndicators(true)
         ServiceAPI.getCartolaData(success: { (response) in
             // completion success
             self.partidaResponse = response
@@ -47,6 +47,10 @@ class MenuController: UITableViewController {
     
     // MARK: - Table View Delegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if partidaResponse.clubes.count == 0 {
+            self.alert(message: "Problemas ao recuperar os dados do Cartola FC.")
+            return
+        }
         
         if indexPath.section == 0 {
             // Top
@@ -77,7 +81,6 @@ class MenuController: UITableViewController {
         let okAction = UIAlertAction(title: "OK", style: .cancel) { (action) in
             // OK
             // get cartola data
-            self.activitiesIndicators(true)
             self.getCartolaData()
         }
         alertController.addAction(okAction)
